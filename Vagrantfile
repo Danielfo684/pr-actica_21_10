@@ -9,6 +9,7 @@ config.vm.network "forwarded_port", guest: 80, host: 80
   apt-get install -y apache2
   cp -v vagrant/apache2.conf /etc/apache2
   cp -v /vagrant/app.127.0.0.1.nip.io.conf /etc/apachw2/sites-available
+  mkdir -p /var/www/app.127.0.0.1.nip.io/html
 a2ensite app.127.0.0.1.nip.io.conf
   systemctl resatrt apache2
   SHELL
